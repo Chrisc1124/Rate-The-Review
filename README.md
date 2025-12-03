@@ -1,5 +1,4 @@
 # rate-the-review
-A data science project analyzing Food.com recipe data to predict user ratings 
-based on review text. Features include TF-IDF vectorization, hypothesis testing 
-on nutritional factors (sodium, sugar, protein) vs ratings, missingness analysis, 
-and a binary classification model to predict highly-rated recipes.
+A data science project analyzing Food.com recipe data - predicting recipe ratings from review text using TF-IDF and logistic regression. 
+Includes exploratory data analysis, missingness assessment, and hypothesis testing 
+on recipe nutrition and user ratings from Food.com data.
