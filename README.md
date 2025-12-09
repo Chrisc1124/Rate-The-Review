@@ -7,13 +7,19 @@ This is a data science project analyzing Food.com recipe data, where our focus i
 ---
 
 ## Introduction
-Food connects people, cultures, and experiences. Whether trying a new recipe, sharing a meal, or reading reviews, food is central to how we explore and share. Both of us enjoy cooking and discovering new recipes, and we often rely on online reviews (social media) to decide what to try , which sparked our interest in understanding what makes a review helpful and how review text relates to ratings.
+Food connects people, cultures, and everyday experiences. Whether we’re trying a new recipe, sharing a meal with friends, or scrolling through online reviews to decide what to cook next, food is a huge part of how we explore, learn, and communicate. Recipe platforms like Food.com don’t just host ingredients and instructions, they capture thousands of real user experiences through reviews and ratings.
+
+Both of us love cooking and discovering new dishes, and we noticed how often people rely on these reviews to decide what’s worth making. That sparked our interest in digging deeper: What actually makes a review helpful? Do certain ingredients or nutritional qualities influence ratings? Can we predict how well a recipe will be received just from the text people write?
+
+To answer these questions, we analyzed two large datasets from Food.com—one containing over 80,000 recipes and another containing millions of user interactions. Our project explores this ecosystem from multiple angles: understanding missingness patterns, performing exploratory data analysis on recipe characteristics, testing hypotheses about nutrition and ratings, and building a predictive model using TF-IDF and logistic regression to classify review sentiment.
+
+Through this process, we aim to better understand the relationship between how people talk about food and how they choose to rate it.
 
 The first dataset that we examined, `recipes`, contains 83,782 rows and 12 columns with each row corresponding to an individual recipe. The 12 columns include:
 
 | Column | Description |
 | ----------- | ----------- |
-| `'name'` | Recipe name|
+| `name` | Recipe name|
 | `id` | Recipe ID |
 | `minutes`| Minutes to prepare recipe |
 | `contributor_id` | User ID who submitted this recipe |
