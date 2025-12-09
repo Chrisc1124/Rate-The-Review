@@ -7,4 +7,4 @@ This is a data science project analyzing Food.com recipe data, where our focus i
 ---
 
 ## Introduction
-
+Food connects people, cultures, and experiences. Whether trying a new recipe, sharing a meal, or reading reviews, food is central to how we explore and share. Both of us enjoy cooking and discovering new recipes, and we often rely on online reviews (social media) to decide what to try , which sparked our interest in understanding what makes a review helpful and how review text relates to ratings.
