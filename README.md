@@ -49,8 +49,8 @@ The Second dataset that we examined, `interactions`, contains 731,927 rows and 5
 ## Data Cleaning and Exploratory Data Analysis
 Before we dive right into exploring and working with our data, we first had to perform a few cleaning steps to prepare our datasets for better and more efficient analysis.
 
-1. We first mereged our `recipe` dataset with the `interactions` dataset on `id` and `recipe_id`, respecitvely.
-   - The resulting dataset has a row for each unique review corresponding to the recipe. The resulting dataframe is `recipe_interactions`.
+1. We first mereged our `recipes` dataset with the `interactions` dataset on `id` and `recipe_id`, respecitvely.
+   - The resulting dataset has a row for each unique review corresponding to the recipe. The resulting dataframe is `recipes_interactions`.
 2. We then replaced all ratings of 0 with `np.nan`.
    - This makes sense for our dataset since ratings are only a scale of 1-5, so ratings of 0 are treated as missing ratings instead. This avoids our ratings being biased downwards when performing certain operations.
 3. We then added a new column, `avg_rating`, which consists of the average rating for the recipe in the corresponding row.
