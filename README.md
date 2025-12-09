@@ -52,6 +52,6 @@ Before we dive right into exploring and working with our data, we first had to p
 1. We first mereged our `recipe` dataset with the `interactions` dataset on `id` and `recipe_id`, respecitvely.
    - The resulting dataset has a row for each unique review corresponding to the recipe. The resulting dataframe is `recipe_interactions`.
 3. We then replaced all ratings of 0 with `np.nan`.
-  - This makes sense for our dataset since ratings are only a scale of 1-5, so ratings of 0 are treated as missing ratings instead. This avoids our ratings being biased downwards when performing certain operations.
+   - This makes sense for our dataset since ratings are only a scale of 1-5, so ratings of 0 are treated as missing ratings instead. This avoids our ratings being biased downwards when performing certain operations.
 4. We then added a new column, `avg_rating`
 
