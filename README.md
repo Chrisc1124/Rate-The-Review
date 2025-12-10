@@ -110,3 +110,5 @@ For this part of our data analysis, we wanted to look more into the actual revie
   height="800"
   frameborder="0"
 ></iframe>
+
+We can see that our data is skewed to the right with some reviews having drastically longer lengths than the majority of our data. To make the visualization of this graph better, we only inluded 99% of the data since there were some extremely large outliers. We also plotted the median and mean character lengths, which were 249 and 289 respectively-another sign that our data is right-skewed.
