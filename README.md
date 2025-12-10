@@ -139,3 +139,11 @@ Average Rating, Steps, Ingredients, Calories, and Cooking Time by Review Length:
 | Very Long         |             4.62 |   26550 |       11.36 |              9.9  |         469.39 |                   171.77 |
 
 (In this table, Short is defined as reviews with length 0-100, Medium: 101-250, Long: 251-500, Very Long: 500+)
+
+---
+
+## Assessment of Missingness
+The three columns with the most missingness in our data set were `rating`, `avg_rating`, and `description`. We decided to look further into the missingness mechanism(s) the `description` column.
+
+### NMAR Analysis
+We believe that the missingness of the `description` column in our `recipes_interactions` dataframe is most likely NMAR due to the fact that only authors who actaully really care about the recipe and making the recipe look better on the site will leave a description. Those who don't care as much about their recipe, or if it's a simple and straightforward recipe, may decide that having a description is not a priority and will leave it out.
