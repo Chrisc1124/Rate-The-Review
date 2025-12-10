@@ -106,7 +106,7 @@ For this part of our data analysis, we wanted to look more into the actual revie
 
 <iframe
   src="assets/review_len_dist.html"
-  width="800"
-  height="600"
+  width="1000"
+  height="800"
   frameborder="0"
 ></iframe>
