@@ -47,6 +47,8 @@ The Second dataset that we examined, `interactions`, contains 731,927 rows and 5
 ---
 
 ## Data Cleaning and Exploratory Data Analysis
+
+### Data Cleaning
 Before we dive right into exploring and working with our data, we first had to perform a few cleaning steps to prepare our datasets for better and more efficient analysis.
 
 1. We first mereged our `recipes` dataset with the `interactions` dataset on `id` and `recipe_id`, respecitvely.
@@ -60,7 +62,7 @@ Before we dive right into exploring and working with our data, we first had to p
 5. We added a `review_length` column. 
    - This column just contains the length of the review text. We planned on doing some analysis with the review column, so it made logical sense to add this column.
   
-### Resulting Dataframe
+#### Resulting Dataframe
 After these cleaning steps, we are left with a dataframe which has 234,429 rows and 26 columns. Here are the first 5 rows of our cleaned dataframe with a few columns:
 
 | name                                 |     id |   minutes |   rating |   calories(#) |   review_length |
@@ -98,3 +100,5 @@ More specifically, the 26 columns are:
  'saturated fat(pdv)',
  'carbohydrates(pdv)',
  'review_length']`
+
+#### Univarite Analysis
