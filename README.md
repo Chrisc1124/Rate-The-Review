@@ -106,7 +106,7 @@ For this part of our data analysis, we wanted to look more into the actual revie
 
 <iframe src="assets/review_len_dist.html" 
    width="800"
-   height="400px"
+   height="500"
    frameborder="0"
 ></iframe>
 We can see that our data is skewed to the right with some reviews having drastically longer lengths than the majority of our data. To make the visualization of this graph better, we only inluded 99% of the data since there were some extremely large outliers. We also plotted the median and mean character lengths, which were 249 and 289 respectively-another sign that our data is right-skewed.
@@ -116,7 +116,7 @@ For this section of our data analysis, we wanted to look at the distribution and
 <iframe
   src="assets/avg_review_length_by_rating.html"
   width="800"
-  height="600"
+  height="500"
   frameborder="0"
 ></iframe>
 <iframe
