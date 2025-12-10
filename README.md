@@ -54,7 +54,19 @@ Before we dive right into exploring and working with our data, we first had to p
 2. We then replaced all ratings of 0 with `np.nan`.
    - This makes sense for our dataset since ratings are only a scale of 1-5, so ratings of 0 are treated as missing ratings instead. This avoids our ratings being biased downwards when performing certain operations.
 3. We then added a new column, `avg_rating`, which consists of the average rating for the recipe in the corresponding row.
+
 4. We split the `nutrition` column into multiple seperate columns.
    - The original `nutrition` column contained what looked like a list (of several nutritional values), but was actually a string/object. We created a function that turned the `nutrition` column into a list of floats, then turned each individual nutrition fact into its own column. This allows us to do a lot more exploratory analysis with each nutrition fact.
 5. We added a `review_length` column. 
    - This column just contains the length of the review text. We planned on doing some analysis with the review column, so it made logical sense to add this column.
+  
+### Resulting Dataframe
+After these cleaning steps, we are left with a dataframe which has 234,429 rows and 26 columns. Here are the first 5 rows of our cleaned dataframe:
+
+| name                                 |     id |   minutes |   rating |   calories(#) |   review_length |
+|:-------------------------------------|-------:|----------:|---------:|--------------:|----------------:|
+| 1 brownies in the world    best ever | 333281 |        40 |        4 |         138.4 |             254 |
+| 1 in canada chocolate chip cookies   | 453467 |        45 |        5 |         595.1 |             336 |
+| 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             469 |
+| 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             162 |
+| 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             188 |
