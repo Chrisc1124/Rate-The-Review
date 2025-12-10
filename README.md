@@ -121,8 +121,18 @@ For this section of our data analysis, we wanted to look at the distribution and
 ></iframe>
 <iframe
   src="assets/review_length_by_rating_violin.html"
-  width="800"
+  width="700"
   height="550"
   frameborder="0"
 ></iframe>
 Here are two different graphs, one showing the mean review length and the other showing the distribution of review lengths, both dependent on the individual rating categories. In both graphs, we can see that reviews who have a rating of 3 tend to have the highest mean and median review lengths (336 and 272 respectively), and those value decreases as you go up or down in rating. Overall, we can see that reviews with ratings that are on either end of the spectrum (1 and 5), tend to have lower average and median review lengths, and this does make some logical sense since the ratings may speak more for themselves here. Ratings which are more in the middle (2, 3, and 4) may leave more room for some sort of explanation to back that choice.
+
+### Interesting Aggregates
+For this section, we wanted to see how some columns and variables in our dataset relate to the length of reviews. More specifically, we wanted to break down the review lengths into different categories and examine its relationship with columns such as `n_steps`, `n_ingredients`, `calories(#)`, `rating`, and `minutes`. We used `pd.cut()` to categorize review lenghts into a few simple categories, then examined the mean values for the previously listed columns. Here is our resulting grouped dataframe, where we can see a couple more interesting relationships regarding review length.
+Average Rating, Steps, Ingredients, Calories, and Cooking Time by Review Length:
+| review_category   |   Average Rating |   Count |   Avg Steps |   Avg Ingredients |   Avg Calories |   Avg Cooking Time (min) |
+|:------------------|-----------------:|--------:|------------:|------------------:|---------------:|-------------------------:|
+| Short             |             4.69 |   25910 |       10.29 |              8.93 |         427.42 |                    78.75 |
+| Medium            |             4.69 |   82008 |        9.35 |              8.69 |         396.27 |                    99.12 |
+| Long              |             4.69 |   84868 |        9.94 |              9.2  |         412.34 |                    93.88 |
+| Very Long         |             4.62 |   26550 |       11.36 |              9.9  |         469.39 |                   171.77 |
