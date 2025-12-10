@@ -147,3 +147,6 @@ The three columns with the most missingness in our data set were `rating`, `avg_
 
 ### NMAR Analysis
 We believe that the missingness of the `description` column in our `recipes_interactions` dataframe is most likely NMAR due to the fact that only authors who actaully really care about the recipe and making the recipe look better on the site will leave a description. Those who don't care as much about their recipe, or if it's a simple and straightforward recipe, may decide that having a description is not a priority and will leave it out. For example, if you're an upcoming cook or someone who wants to make a cookbook, you'd probably include a nice description with your recipe. In contrast, if you're someone who’s lazy but still wants to share a recipe, you'd just post it without a description.
+
+### Missingness Dependency (MAR Analysis)
+In this section, we wanted to continue looking at the `description` column and its missingness, however, we will be examining its missingness dependency with other columns in our dataset. Specifically, we are going to be looking at whether the missingness of `description` is dependent on `n_steps` (the number of steps in the recipe), and `n_ingredients` (the number of ingredients in the recipe).
