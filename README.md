@@ -61,7 +61,7 @@ Before we dive right into exploring and working with our data, we first had to p
    - This column just contains the length of the review text. We planned on doing some analysis with the review column, so it made logical sense to add this column.
   
 ### Resulting Dataframe
-After these cleaning steps, we are left with a dataframe which has 234,429 rows and 26 columns. Here are the first 5 rows of our cleaned dataframe:
+After these cleaning steps, we are left with a dataframe which has 234,429 rows and 26 columns. Here are the first 5 rows of our cleaned dataframe with a few columns:
 
 | name                                 |     id |   minutes |   rating |   calories(#) |   review_length |
 |:-------------------------------------|-------:|----------:|---------:|--------------:|----------------:|
