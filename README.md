@@ -116,7 +116,7 @@ For this section of our data analysis, we wanted to look at the distribution and
 <iframe
   src="assets/avg_review_length_by_rating.html"
   width="800"
-  height="500"
+  height="550"
   frameborder="0"
 ></iframe>
 <iframe
@@ -125,3 +125,4 @@ For this section of our data analysis, we wanted to look at the distribution and
   height="600"
   frameborder="0"
 ></iframe>
+Here are two different graphs showing, one showing the mean review length and the other showing the distribution of review lengths, both conditioned on the rating category.
