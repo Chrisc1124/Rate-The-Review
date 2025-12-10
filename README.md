@@ -130,9 +130,12 @@ Here are two different graphs, one showing the mean review length and the other 
 ### Interesting Aggregates
 For this section, we wanted to see how some columns and variables in our dataset relate to the length of reviews. More specifically, we wanted to break down the review lengths into different categories and examine its relationship with columns such as `n_steps`, `n_ingredients`, `calories(#)`, `rating`, and `minutes`. We used `pd.cut()` to categorize review lenghts into a few simple categories, then examined the mean values for the previously listed columns. Here is our resulting grouped dataframe, where we can see a couple more interesting relationships regarding review length.
 Average Rating, Steps, Ingredients, Calories, and Cooking Time by Review Length:
+
 | review_category   |   Average Rating |   Count |   Avg Steps |   Avg Ingredients |   Avg Calories |   Avg Cooking Time (min) |
 |:------------------|-----------------:|--------:|------------:|------------------:|---------------:|-------------------------:|
 | Short             |             4.69 |   25910 |       10.29 |              8.93 |         427.42 |                    78.75 |
 | Medium            |             4.69 |   82008 |        9.35 |              8.69 |         396.27 |                    99.12 |
 | Long              |             4.69 |   84868 |        9.94 |              9.2  |         412.34 |                    93.88 |
 | Very Long         |             4.62 |   26550 |       11.36 |              9.9  |         469.39 |                   171.77 |
+
+(In this table, Short is defined as reviews with length 0-100, Medium: 101-250, Long: 251-500, Very Long: 500+)
