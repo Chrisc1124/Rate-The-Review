@@ -110,3 +110,12 @@ For this part of our data analysis, we wanted to look more into the actual revie
    frameborder="0"
 ></iframe>
 We can see that our data is skewed to the right with some reviews having drastically longer lengths than the majority of our data. To make the visualization of this graph better, we only inluded 99% of the data since there were some extremely large outliers. We also plotted the median and mean character lengths, which were 249 and 289 respectively-another sign that our data is right-skewed.
+
+### Bivariate Analysis
+For this section of our data analysis, we wanted to look at the distribution and statistics of review text length, in regards to the rating categories. We have seen some statistics on review length in our dataset overall, but how does it look when broken down into each rating category?
+<iframe
+  src="assets/file-name.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
