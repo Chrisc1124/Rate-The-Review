@@ -70,3 +70,31 @@ After these cleaning steps, we are left with a dataframe which has 234,429 rows 
 | 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             469 |
 | 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             162 |
 | 412 broccoli casserole               | 306168 |        40 |        5 |         194.8 |             188 |
+
+More specifically, the 26 columns are:
+`['name',
+ 'id',
+ 'minutes',
+ 'contributor_id',
+ 'submitted',
+ 'tags',
+ 'nutrition',
+ 'n_steps',
+ 'steps',
+ 'description',
+ 'ingredients',
+ 'n_ingredients',
+ 'user_id',
+ 'recipe_id',
+ 'date',
+ 'rating',
+ 'review',
+ 'avg_rating',
+ 'calories(#)',
+ 'total fat(pdv)',
+ 'sugar(pdv)',
+ 'sodium(pdv)',
+ 'protein(pdv)',
+ 'saturated fat(pdv)',
+ 'carbohydrates(pdv)',
+ 'review_length']`
