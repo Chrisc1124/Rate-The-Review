@@ -1,4 +1,4 @@
-<img width="2058" height="210" alt="image" src="https://github.com/user-attachments/assets/8f32aec5-e96b-4161-9b35-7b4916dce5a7" /># Rate-The-Review
+# Rate-The-Review
 Authors: Chris Chen, Ishaan Tibdewal
 
 ## Overview
