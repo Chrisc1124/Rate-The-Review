@@ -1,4 +1,4 @@
-# Rate-The-Review
+<img width="2058" height="210" alt="image" src="https://github.com/user-attachments/assets/8f32aec5-e96b-4161-9b35-7b4916dce5a7" /># Rate-The-Review
 Authors: Chris Chen, Ishaan Tibdewal
 
 ## Overview
@@ -194,3 +194,21 @@ For this MAR test we ran a permutation test with 2000 repetitions, each time ran
 ></iframe>
 
 For this MAR test we ran a permutation test with 2000 repetitions, each time randomly shuffling the missingness of `description` and taking the absolute difference of mean `n_ingredients` (description missing - not missing). Our **observed statistic** was **0.1.472**, which is indicated by the red line on the distribution graph. This left us with a **p-value** of **0.002**, which is less than **0.05** (our significance level), thus in this test we **eject** our null hypothesis and conclude that the missingness of `description` **does** actually depend on `n_ingredients`.
+
+---
+
+## Hypothesis Testing
+In this section, we wanted to dive deeper into the review length trends that we have seen in our dataset. More sepcifically, we wanted to see if there was some difference or correlation between the length of a review and the rating correlated with that review. To do this, we first had to do some prep with our data. We classified reviews as long vs short, based on whether they were above or below the median review length of our dataset. We took the median rather than the mean due to the fact that our data was right-skewed, and median is more robust to outliers. This leaves us with two similar sized groups to test on. We then ran a **permutation test** to futher analyze this question.
+- **Null Hypothesis**: Long and short reviews recieve the same ratings on average
+- **Alternate Hypothesis**: Long reviews recieve lower ratings on average compared to short reviews
+- **Test Statistic**: Difference in means of long reviews and short reviews
+- **Significance Level**: 0.05
+
+We used a permutation test because it requires no distributional assumptions, which is important given our right-skewed review length data. Based on our alternate hypothesis, we believe that longer reviews will have lower ratings on average. We think this because we feel that if a recipe has a high rating, the rating may speak for itself and the user does not have to provide a lenghty description. This, compared to lower ratings where people may feel more obligated to talk about why the recipe deserved the rating it got. The difference in means of long and short reviews make sense since we want to break down the groups into long and short reviews, and compare the average rating recieved by each group.
+
+<iframe
+  src="assets/hypothesis_test.html"
+  width="800"
+  height="500"
+  frameborder="0"
+></iframe>
