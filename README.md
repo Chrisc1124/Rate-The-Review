@@ -214,3 +214,19 @@ We used a permutation test because it requires no distributional assumptions, wh
 ></iframe>
 
 After running our permutation test with 10,000 repetitions, each time shuffling the long vs short labels and taking the difference in means of (long - short), we ended up with an **observed statistic** of **-0.0128** (red dotted line above), with the distribution of differences plotted above as well. Our negative observed statistic tells us that shorter reviews did have slightly higher ratings on average. Our **p-value** of **0.0001** tells us that our observed statistic is something is rarely ever seen when the long and short review labels are randomly distributed. With this p-value, we are able to **reject** our null hypothesis at a 0.05 significant level and can conclude that in general longer reviews are associated with lower ratings, but only by a small margin.
+
+---
+
+## Framing a Prediction Problem
+Like we mentioned earlier in this report, we wanted to dive deeper into the review texts that were curated by the reviewers. We wanted to look more into review sentiment, and see if we could gain a better understanding about the relationship between the way people talk about a recipe and how they review it.
+
+Our prediction task is a binary classification problem: determining whether a user’s review will be highly rated (rating ≥ 4) or low rated (rating < 4) based on the review text and relevant recipe attributes. The target variable, `highly_rated`, is a simple 0/1 indicator that captures overall sentiment—1 for positive reviews and 0 for more negative ones. We chose this target because it aligns closely with our platform’s goal of understanding how the content of a review relates to user satisfaction and how that information can support better recommendations and quality insights for both users and creators.
+
+Because the dataset is extremely imbalanced (around 94% highly rated vs. 6% low rated), we evaluate our models using F1-macro instead of accuracy. Accuracy would make a weak model look good—for example, predicting “highly rated” for every review already yields 94% accuracy while completely ignoring low-rated reviews. F1-macro avoids this problem by computing the F1-score for each class separately and then averaging them, giving minority-class performance equal weight. This is especially important for our application, since detecting low-rated reviews provides meaningful insight into dissatisfaction, potential recipe issues, and areas where the platform can improve user experience.
+
+<iframe
+  src="assets/target_distribution.html"
+  width="800"
+  height="450"
+  frameborder="0"
+></iframe>
