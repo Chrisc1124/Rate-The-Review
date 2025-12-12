@@ -248,3 +248,40 @@ Our primary evaluation metric is F1-macro, which treats the low-rated and highly
   height="450"
   frameborder="0"
 ></iframe>
+
+## Final Model
+Our final model expands the feature set used in the baseline model by incorporating additional recipe characteristics that may influence how users rate their cooking experiences.
+
+`review`
+This is the user’s written review text and remains the most important feature, as it directly reflects sentiment and user experience. We vectorize the text using TF-IDF with English stop words removed, converting each review into a numerical representation that highlights informative terms in the corpus.
+
+`n_steps`
+This quantitative feature represents the number of steps in the recipe. Since it is already numeric, it is passed through unchanged. We retain it because recipe complexity may influence user satisfaction.
+
+`calories(#)`
+This numeric column captures the total calorie count of the recipe. We include it because nutritional content may relate to user preferences—some users may gravitate toward lighter dishes, while others may prefer richer, higher-calorie meals. We standardize this feature using StandardScaler to ensure comparability across recipes and prevent scale differences from affecting model performance.
+
+`minutes`
+This quantitative feature measures total cooking time. Our exploratory analysis showed that cooking duration varies across rating categories, suggesting it may help distinguish highly rated recipes from lower-rated ones. Because cooking times are highly right-skewed, we apply a QuantileTransformer with output_distribution='normal' to normalize the distribution and allow the model to learn more effectively from this feature.
+
+#### Modeling Algorithm and Hyperparameter Tuning
+
+We use logistic regression, consistent with our baseline model, and tune its hyperparameters using GridSearchCV with 5-fold cross-validation and F1-macro scoring. The grid search includes:
+- C: [1, 2, 3, 4, 5, 6]
+- penalty: ['l1', 'l2']
+- solver: ['lbfgs'] for L2, and ['liblinear'] for L1
+- max_iter: [1500, 1600, 1700] 
+(These options for the hyperparamters were chosen after a couple test runs and narrowing down the range of values.)
+
+The best hyperparameters selected were:
+C = 5, penalty = 'l2', solver = 'lbfgs', max_iter = 1500.
+
+#### Performance
+We evaluate the final model using F1-macro. The model achieves an F1-macro score of 0.7302, an improvement of +0.0086 over the baseline (0.7216). The F1-weighted score also increases from 0.9208 to 0.9270, reflecting overall performance gains across classes. These improvements indicate that incorporating nutritional and cooking time features, along with targeted hyperparameter tuning enhanced the model’s ability to capture meaningful patterns that predict whether a review will be highly rated. Despite the strong class imbalance, the model maintains balanced performance across both classes, showing relatively measurable improvements over the baseline.
+
+<iframe
+  src="assets/final_model_confusion_matrix.html"
+  width="800"
+  height="450"
+  frameborder="0"
+></iframe>
